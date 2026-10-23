@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keerthivasan J — Portfolio</title>
+<meta name="description" content="Embedded systems, firmware and PCB design portfolio of Keerthivasan J.">
+<meta property="og:title" content="Keerthivasan J — Embedded Systems Portfolio">
+<meta property="og:description" content="ESP32 firmware, PCB design and hardware products: Heat Jacket, VAMOS, Smart Bin and more.">
+<meta property="og:image" content="assets/vamos-1.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='6' y='6' width='20' height='20' rx='3' fill='%23ff8a1f'/><text x='16' y='21' font-size='11' text-anchor='middle' font-family='monospace' font-weight='bold' fill='%230b0b0b'>KJ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="motion.css">
+</head>
+<body class="loading">
+
+<!-- boot screen -->
+<div class="boot" id="boot" aria-hidden="true">
+  <pre id="bootlog"></pre>
+  <div class="boot-bar"><i></i></div>
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <path id="sq" d="M4 30 C 14 4, 26 4, 30 22 S 46 44, 56 22 S 74 0, 86 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path id="gear" d="M50 8l6 0 2 10a33 33 0 0 1 9 4l9-6 4 4-6 9a33 33 0 0 1 4 9l10 2 0 6-10 2a33 33 0 0 1-4 9l6 9-4 4-9-6a33 33 0 0 1-9 4l-2 10-6 0-2-10a33 33 0 0 1-9-4l-9 6-4-4 6-9a33 33 0 0 1-4-9l-10-2 0-6 10-2a33 33 0 0 1 4-9l-6-9 4-4 9 6a33 33 0 0 1 9-4z M53 38a12 12 0 1 0 0.01 0z" fill-rule="evenodd"/>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <a href="#home" class="brand">Keerthivasan J</a>
+  <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#pcb">PCB</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact" class="nav-cta magnetic">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ 1. COVER ============ -->
+<section id="home" class="slide cover">
+  <canvas id="circuit" class="circuit" aria-hidden="true"></canvas>
+  <div class="meta-row"><span>Embedded Engineer Portfolio</span><span>Keerthivasan J</span></div>
+  <div class="cover-title">
+    <h1 class="mega split">PORTFOLIO</h1>
+    <span class="script cover-script">Embedded Systems</span>
+  </div>
+  <p class="cover-sub">I'm a <span class="typer" id="typer">Firmware Developer</span><span class="caret">|</span></p>
+  <div class="chips float">
+    <span class="chip">ESP32</span><span class="chip">KiCad 9</span><span class="chip">C / C++</span>
+    <span class="chip">ESP-IDF</span><span class="chip">I2C · SPI · UART</span><span class="chip">ESP-NOW</span>
+  </div>
+  <svg class="squig s1 wiggle"><use href="#sq"/></svg>
+  <svg class="squig s2 wiggle"><use href="#sq"/></svg>
+  <svg class="squig s3 wiggle"><use href="#sq"/></svg>
+
+  <div class="chip-stage" id="chipStage" aria-hidden="true">
+    <svg class="ring-text" viewBox="0 0 300 300">
+      <path id="ringPath" d="M150 150 m-120 0 a120 120 0 1 1 240 0 a120 120 0 1 1 -240 0" fill="none"/>
+      <text><textPath href="#ringPath">FIRMWARE • PCB DESIGN • IoT • SENSORS • WIRELESS • </textPath></text>
+    </svg>
+    <div class="chip3d" id="chip3d">
+      <div class="ic"><span>ESP32</span><small>KJ-2026</small></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue">scroll ↓</a>
+</section>
+
+<!-- moving band -->
+<div class="band" aria-hidden="true">
+  <div class="band-track">
+    <span>EMBEDDED C</span><b>✦</b><span>ESP32</span><b>✦</b><span>KICAD 9</span><b>✦</b><span>PCB LAYOUT</span><b>✦</b><span>ESP-NOW</span><b>✦</b><span>SENSORS</span><b>✦</b><span>IoT</span><b>✦</b><span>FIRMWARE</span><b>✦</b>
+    <span>EMBEDDED C</span><b>✦</b><span>ESP32</span><b>✦</b><span>KICAD 9</span><b>✦</b><span>PCB LAYOUT</span><b>✦</b><span>ESP-NOW</span><b>✦</b><span>SENSORS</span><b>✦</b><span>IoT</span><b>✦</b><span>FIRMWARE</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ============ 2. HELLO ============ -->
+<section id="about" class="slide hello">
+  <div class="meta-row"><span>Keerthivasan J</span><span>01 / About</span></div>
+  <div class="hello-grid">
+    <div class="reveal">
+      <h2 class="big split">HELLO I'M</h2>
+      <span class="script under">Keerthivasan</span>
+      <p class="lead">I'm a second-year <em>B.E. Electrical &amp; Electronics Engineering</em> student at <em>Sri Sairam Engineering College, Chennai</em>. I build ESP32 products end to end, from C/C++ firmware and sensor integration to KiCad schematics and multi-layer PCB layout.</p>
+      <p class="lead">I've delivered a client prototype through Sairam Incubation Foundation, built a wearable motion tracker for rehabilitation, and reached the advanced round of Smart India Hackathon 2025. I'm looking for an <em>embedded hardware, firmware or PCB design internship</em>.</p>
+      <div class="stats">
+        <div><b data-count="5">0</b><span>Hardware projects</span></div>
+        <div><b data-count="2">0</b><span>Custom PCBs</span></div>
+        <div><b data-count="8">0</b><span>Sensors integrated</span></div>
+        <div><b>7.7</b><span>CGPA</span></div>
+      </div>
+    </div>
+    <div class="portrait reveal">
+      <div class="orbit" aria-hidden="true">
+        <span class="o1">ESP32</span><span class="o2">KiCad</span><span class="o3">C++</span><span class="o4">Wi-Fi</span>
+      </div>
+      <div class="portrait-frame tilt"><img src="assets/me.jpg" alt="Portrait of Keerthivasan J"></div>
+      <span class="sticker">Chennai, TN</span>
+      <svg class="squig p1 wiggle"><use href="#sq"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. SKILLS ============ -->
+<section id="skills" class="slide skills">
+  <div class="meta-row"><span>Keerthivasan J</span><span>02 / Skills</span></div>
+  <div class="title-block center">
+    <h2 class="big split">SKILLS &amp; TOOLS</h2>
+    <span class="script under">Toolkit</span>
+  </div>
+  <div class="paper reveal">
+    <div class="paper-col">
+      <h3>Core Skills</h3>
+      <ul>
+        <li>Embedded C / C++ firmware</li>
+        <li>Sensor integration &amp; calibration</li>
+        <li>Closed-loop control</li>
+        <li>Wireless networking (ESP-NOW, Wi-Fi)</li>
+        <li>Schematic &amp; 2/4-layer PCB layout</li>
+        <li>Hardware bring-up &amp; debugging</li>
+        <li>Thermal testing</li>
+      </ul>
+    </div>
+    <div class="paper-col">
+      <h3>Tools &amp; Frameworks</h3>
+      <div class="tools">
+        <span class="tool"><i>IDF</i>ESP-IDF v5.5</span>
+        <span class="tool"><i>Ard</i>Arduino</span>
+        <span class="tool"><i>PIO</i>PlatformIO</span>
+        <span class="tool"><i>Ki</i>KiCad 9</span>
+        <span class="tool"><i>Git</i>Git / GitHub</span>
+        <span class="tool"><i>Bly</i>Blynk IoT</span>
+      </div>
+      <h3 class="mt">Protocols</h3>
+      <div class="tags">
+        <span>I2C</span><span>SPI</span><span>UART</span><span>OneWire</span><span>ESP-NOW</span><span>Wi-Fi</span><span>HTTP/HTTPS</span><span>REST API</span>
+      </div>
+    </div>
+  </div>
+  <div class="hw-strip">
+    <div class="reveal tilt"><h4>Microcontrollers</h4><p>ESP32 · ESP32-S3 · ESP32-C3 (Seeed XIAO) · Arduino Uno / AVR</p></div>
+    <div class="reveal tilt"><h4>Sensors &amp; Displays</h4><p>ICM-20948 (DMP) · BMI323 · LPS28DFW · NTC · DS18B20 · DHT11 · HC-SR04 · Capacitive moisture · ST7789 TFT · P10 LED matrix</p></div>
+    <div class="reveal tilt"><h4>Power &amp; Protection</h4><p>BQ25185 · TP4056 Li-ion charging · LDO regulation · USB-C ESD/TVS</p></div>
+  </div>
+  <svg class="squig k1 wiggle"><use href="#sq"/></svg>
+  <svg class="squig k2 wiggle"><use href="#sq"/></svg>
+</section>
+
+<!-- ============ 4. PROJECTS INTRO ============ -->
+<section id="projects" class="slide divider">
+  <svg class="gear g1" viewBox="0 0 106 106" aria-hidden="true"><use href="#gear"/></svg>
+  <svg class="gear g2" viewBox="0 0 106 106" aria-hidden="true"><use href="#gear"/></svg>
+  <svg class="gear g3" viewBox="0 0 106 106" aria-hidden="true"><use href="#gear"/></svg>
+  <div class="meta-row"><span>Keerthivasan J</span><span>03 / Projects</span></div>
+  <div class="divider-inner">
+    <span class="outline">BUILT</span>
+    <h2 class="mega split">PROJECTS</h2>
+    <span class="script cover-script">Hardware that works</span>
+  </div>
+  <ol class="proj-index">
+    <li><a href="#heat"><b>01</b> Heat Jacket</a></li>
+    <li><a href="#vamos"><b>02</b> VAMOS</a></li>
+    <li><a href="#onion"><b>03</b> Smart Onion Storage</a></li>
+    <li><a href="#vermi"><b>04</b> Vermicompost Monitor</a></li>
+    <li><a href="#bin"><b>05</b> Smart Bin</a></li>
+    <li><a href="#pcb"><b>06</b> PCB Design</a></li>
+  </ol>
+</section>
+
+<!-- ============ 5. HEAT JACKET ============ -->
+<section id="heat" class="slide project">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Project 01</span></div>
+  <div class="proj-head">
+    <h2 class="big split">HEAT JACKET</h2>
+    <span class="script under">Medical Device</span>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-text reveal">
+      <p class="role">Embedded Hardware Developer · Client Project · Sairam Incubation Foundation · Mar – Jun 2025</p>
+      <p>A temperature-controlled therapeutic heating jacket using an ESP32, NTC thermistors, PTC heaters, relay drivers and vibration motors. I calibrated the sensors, ran thermal tests and demonstrated the working prototype to the client.</p>
+      <ul class="points">
+        <li>Closed-loop bang-bang control across 4 NTC channels (Beta-equation conversion)</li>
+        <li>60 °C over-temperature relay cutoff for safety</li>
+        <li>Wi-Fi remote control: setpoints &amp; zone commands as JSON over HTTPS</li>
+      </ul>
+      <div class="widget">
+        <div class="widget-head">
+          <span>Control loop · simulation</span>
+          <span class="live"><i></i><b id="tempNow">--.- °C</b> · heater <b id="heaterState">OFF</b></span>
+        </div>
+        <canvas id="tempChart" height="150"></canvas>
+        <div class="widget-ctrl">
+          <label>Setpoint <input type="range" id="setpoint" min="45" max="58" value="52"> <b id="setVal">52 °C</b></label>
+        </div>
+      </div>
+      <div class="stack"><span>ESP32</span><span>NTC</span><span>PTC heaters</span><span>Relays</span><span>HTTPClient</span><span>ArduinoJson</span></div>
+      <a class="gh" href="https://github.com/Keerthivasan-cdm/Heating-Jacket" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+    <div class="collage c-heat reveal">
+      <img src="assets/heat-3.jpg" alt="Wearing the heat jacket prototype" class="lb">
+      <img src="assets/heat-1.jpg" alt="Wiring the ESP32 control box" class="lb">
+      <img src="assets/heat-2.jpg" alt="Measuring supply voltage on the control box" class="lb">
+      <img src="assets/heat-4.jpg" alt="Heat jacket being tested" class="lb">
+    </div>
+  </div>
+  <svg class="squig j1 wiggle"><use href="#sq"/></svg>
+</section>
+
+<!-- ============ 6. VAMOS ============ -->
+<section id="vamos" class="slide project alt">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Project 02</span></div>
+  <div class="proj-head">
+    <h2 class="big split">VAMOS</h2>
+    <span class="script under">Wearable Motion Tracking</span>
+  </div>
+  <div class="proj-grid">
+    <div class="vamos-left reveal">
+      <div class="collage c-vamos">
+        <img src="assets/vamos-1.jpg" alt="VAMOS wearable on the upper arm" class="lb">
+        <video src="assets/vamos-demo.mp4" poster="assets/vamos-poster.jpg" muted loop playsinline controls preload="none"></video>
+        <img src="assets/vamos-2.jpg" alt="VAMOS wrist and arm nodes in use" class="lb">
+      </div>
+      <div class="widget arm-widget" id="armWidget">
+        <div class="widget-head"><span>Try it · move your mouse / finger here</span><span class="live"><i></i>ESP-NOW link</span></div>
+        <svg viewBox="-60 -100 300 275" class="arm">
+          <circle cx="90" cy="40" r="14" class="joint-ring"/>
+          <g id="upperArm" transform="rotate(0 90 40)">
+            <rect x="82" y="40" width="16" height="70" rx="8" class="limb"/>
+            <rect x="80" y="62" width="20" height="18" rx="3" class="node"/>
+            <g id="foreArm" transform="rotate(0 90 110)">
+              <rect x="82" y="110" width="16" height="62" rx="8" class="limb"/>
+              <rect x="80" y="148" width="20" height="14" rx="3" class="node"/>
+            </g>
+          </g>
+          <circle cx="90" cy="40" r="6" class="joint"/>
+        </svg>
+        <div class="readouts">
+          <div><span>Shoulder</span><b id="angS">0°</b></div>
+          <div><span>Elbow</span><b id="angE">0°</b></div>
+          <div><span>Packets</span><b id="pkts">0</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-text reveal">
+      <p class="role">Embedded Systems Developer · Rehabilitation &amp; Biomechanics · Nov 2024 – Mar 2025</p>
+      <p>A multi-IMU wearable that captures real-time shoulder, elbow and wrist joint angles for rehabilitation monitoring, streamed live to a mobile dashboard.</p>
+      <ul class="points">
+        <li>Master–slave ESP-NOW network: master reads ICM-20948 + BMI323, hosts a REST API and posts Euler angles to the cloud</li>
+        <li>Quaternion calibration to a stored neutral pose (NVS) on ICM-20948 DMP data</li>
+        <li>Elbow-angle correction that removes shoulder motion</li>
+        <li>Fixed I2C bus conflicts and ESP-NOW / Wi-Fi channel interference; ported to ESP-IDF v5.5</li>
+      </ul>
+      <div class="kpis">
+        <div><b>3</b><span>Joints tracked</span></div>
+        <div><b>2</b><span>Wireless nodes</span></div>
+        <div><b>Live</b><span>Cloud dashboard</span></div>
+      </div>
+      <div class="stack"><span>ESP32</span><span>XIAO ESP32-S3</span><span>ICM-20948</span><span>BMI323</span><span>ESP-NOW</span><span>ESP-IDF</span></div>
+      <a class="gh" href="https://github.com/Keerthivasan-cdm/vamos-final" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+  </div>
+  <svg class="squig j2 wiggle"><use href="#sq"/></svg>
+</section>
+
+<!-- ============ 7. ONION + VERMI ============ -->
+<section id="onion" class="slide project duo">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Projects 03 &amp; 04</span></div>
+  <div class="proj-head">
+    <h2 class="big split">IoT &amp; SENSING</h2>
+    <span class="script under">Field Devices</span>
+  </div>
+  <div class="duo-grid">
+    <article class="card reveal tilt">
+      <div class="card-media"><img src="assets/onion-1.jpg" alt="ESP32 board for smart onion storage" class="lb"></div>
+      <div class="card-body">
+        <span class="badge">SIH 2025 · Advanced round</span>
+        <h3>Smart Onion Storage &amp; Monitoring</h3>
+        <p class="role">IoT System Developer · Jun – Jul 2025</p>
+        <p>An ESP32 system with DHT11 sensing, automatic 12 V ventilation fan control and a Blynk IoT cloud dashboard to cut post-harvest spoilage. Selected as an advanced candidate in the Smart India Hackathon 2025 initial round.</p>
+        <div class="stack"><span>ESP32</span><span>DHT11</span><span>12 V fan</span><span>Blynk</span></div>
+        <a class="gh" href="https://github.com/Keerthivasan-cdm/SIH-_-ONION_STROAGE" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </article>
+    <article class="card reveal tilt" id="vermi">
+      <div class="card-media three">
+        <img src="assets/vermi-2.jpg" alt="Team with the vermicompost monitor at the compost site" class="lb">
+        <img src="assets/vermi-1.jpg" alt="Vermicompost monitor PCB" class="lb">
+        <video src="assets/vermi-demo.mp4" poster="assets/vermi-poster.jpg" muted loop playsinline controls preload="none"></video>
+      </div>
+      <div class="card-body">
+        <span class="badge">Handheld · Battery powered</span>
+        <h3>Vermicompost Quality Monitor</h3>
+        <p class="role">Embedded Systems Developer · Jul – Aug 2025</p>
+        <p>A portable handheld unit designed in KiCad 9 around a Seeed XIAO ESP32-C3 with TP4056 Li-ion charging. It reads a capacitive moisture sensor and DS18B20 probe live on an ST7789 TFT with custom boot graphics, and has a serial-command two-point calibration tool that saves to flash.</p>
+        <div class="stack"><span>XIAO ESP32-C3</span><span>TP4056</span><span>DS18B20</span><span>ST7789</span><span>KiCad 9</span></div>
+        <a class="gh" href="https://github.com/Keerthivasan-cdm/vermicompost-Hand-measureing-device-" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 8. SMART BIN ============ -->
+<section id="bin" class="slide project">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Project 05</span></div>
+  <div class="proj-head">
+    <h2 class="big split">SMART BIN</h2>
+    <span class="script under">Waste Segregation</span>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-text reveal">
+      <p class="role">Team Project · Arduino + Raspberry Pi · Aug 2025</p>
+      <p>An automatic waste-segregation bin that separates biodegradable and non-biodegradable waste. A Raspberry Pi identifies the waste and sends the result over UART; the Arduino opens the right lid with a servo, confirms the drop with an ultrasonic sensor, and shows prompts and reward messages on a P10 LED matrix.</p>
+      <ul class="points">
+        <li>Serial protocol: user name → greeting, <code>0</code> → bio lid, <code>1</code> → non-bio lid</li>
+        <li>Two servos (0 → 115°) and two HC-SR04 sensors keep each lid open until the path is clear (&gt; 30 cm)</li>
+        <li>Scrolling P10 display driven over SPI with DMD2</li>
+      </ul>
+      <div class="stack"><span>Arduino Uno</span><span>Raspberry Pi</span><span>Servo</span><span>HC-SR04</span><span>P10 LED</span><span>UART</span></div>
+      <a class="gh" href="https://github.com/Keerthivasan-cdm/smart-bin" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+    <div class="reveal">
+      <div class="widget bin-sim">
+        <div class="widget-head"><span>Try it · drop some waste</span><span class="live"><i></i>UART 9600</span></div>
+        <div class="p10" id="p10"><span id="p10text">SMART BIN</span></div>
+        <div class="bins">
+          <div class="bin" id="binBio"><div class="lid"></div><div class="can"><span>BIO</span></div></div>
+          <div class="bin" id="binNon"><div class="lid"></div><div class="can"><span>NON-BIO</span></div></div>
+          <div class="waste" id="waste"></div>
+        </div>
+        <div class="bin-btns">
+          <button data-w="0" class="magnetic">🍌 Banana peel</button>
+          <button data-w="1" class="magnetic">🥤 Plastic bottle</button>
+          <button data-w="0" class="magnetic">🍂 Leaves</button>
+          <button data-w="1" class="magnetic">🔋 Wrapper</button>
+        </div>
+      </div>
+      <div class="collage c-bin">
+        <img src="assets/bin-2.jpg" alt="The finished smart bin with the team and faculty" class="lb">
+        <img src="assets/bin-1.jpg" alt="Smart bin team at Sairam Techno Incubator" class="lb">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PCB ============ -->
+<section id="pcb" class="slide pcb">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Project 06</span></div>
+  <div class="proj-head">
+    <h2 class="big split">PCB DESIGN</h2>
+    <span class="script under">KiCad 9</span>
+  </div>
+  <p class="hint">Hover a board to power it on ⚡</p>
+  <div class="pcb-grid">
+    <article class="board-card reveal">
+      <div class="board b1 tilt" aria-hidden="true">
+        <svg class="flow" viewBox="0 0 946 376" preserveAspectRatio="none">
+          <path d="M104 188 H180"/><path d="M440 150 H500 V190 H520"/><path d="M640 160 V110 H690"/><path d="M640 220 V260 H690"/><path d="M440 240 H600 V320 H780"/>
+        </svg>
+        <div class="comp usb">USB-C</div>
+        <div class="comp mcu">ESP32-C3<br>WROOM-02</div>
+        <div class="comp imu">ICM<br>20948</div>
+        <div class="comp chg">BQ25185</div>
+        <div class="comp ldo">LDO</div>
+        <span class="dim w">94.6 mm</span><span class="dim h">37.6 mm</span>
+      </div>
+      <h3>Play U SMD — ESP32-C3 + IMU Wearable Board <small>v1 · Sep 2026</small></h3>
+      <ul class="points">
+        <li>3-sheet hierarchical schematic: ESP32-C3, USB-C with USBLC6 ESD + PESD5V0 TVS, AP2112K 3.3 V LDO</li>
+        <li>ICM-20948 9-axis IMU with TLV70018 1.8 V LDO; BQ25185 charger with MAX16054 push-button power</li>
+        <li>Exported Gerber, drill and STEP 3D files for fabrication</li>
+      </ul>
+      <div class="kpis small">
+        <div><b>2</b><span>Layers</span></div><div><b>77</b><span>Footprints</span></div><div><b>38</b><span>Vias</span></div><div><b>0201</b><span>Smallest SMD</span></div>
+      </div>
+    </article>
+    <article class="board-card reveal">
+      <div class="board b2 tilt" aria-hidden="true">
+        <svg class="flow" viewBox="0 0 286 421" preserveAspectRatio="none">
+          <path d="M143 46 V100"/><path d="M200 245 V290 H120"/><path d="M60 245 V300"/>
+        </svg>
+        <div class="comp usb">USB-C</div>
+        <div class="comp mcu">ESP32-C3</div>
+        <div class="comp chg">BQ25185</div>
+        <div class="comp led"></div><div class="comp led l2"></div>
+        <span class="dim w">28.6 mm</span><span class="dim h">42.1 mm</span>
+      </div>
+      <h3>ESP32-C3 Compact Battery Board <small>v2 · Sep – Oct 2026</small></h3>
+      <ul class="points">
+        <li>Condensed MCU, USB-C and BQ25185 charging into a tiny 4-layer board with 0402 passives</li>
+        <li>Boot/reset buttons and status LEDs</li>
+        <li>GND, VBUS, SYS and 3.3 V distributed through copper zones; 0.15–0.4 mm tracks</li>
+      </ul>
+      <div class="kpis small">
+        <div><b>4</b><span>Layers</span></div><div><b>22</b><span>Vias</span></div><div><b>0402</b><span>Passives</span></div><div><b>28×42</b><span>mm board</span></div>
+      </div>
+    </article>
+  </div>
+  <a class="gh center-link" href="https://github.com/Keerthivasan-cdm/kicad-pcb-practice" target="_blank" rel="noopener">See the KiCad files on GitHub →</a>
+</section>
+
+<!-- ============ 10. GALLERY ============ -->
+<section id="gallery" class="slide gallery">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Behind the builds</span></div>
+  <div class="title-block center">
+    <h2 class="big split">IN THE LAB</h2>
+    <span class="script under">Behind the builds</span>
+  </div>
+  <div class="reel">
+    <div class="reel-track">
+      <img src="assets/heat-1.jpg" alt="Wiring the heat jacket controller" class="lb">
+      <img src="assets/vamos-1.jpg" alt="VAMOS on the arm" class="lb">
+      <img src="assets/bin-2.jpg" alt="Smart bin launch" class="lb">
+      <img src="assets/onion-1.jpg" alt="Onion storage board" class="lb">
+      <img src="assets/heat-3.jpg" alt="Heat jacket fitting" class="lb">
+      <img src="assets/vermi-2.jpg" alt="Vermicompost team" class="lb">
+    </div>
+  </div>
+  <div class="reel reverse">
+    <div class="reel-track">
+      <img src="assets/vermi-1.jpg" alt="Vermicompost PCB" class="lb">
+      <img src="assets/heat-2.jpg" alt="Testing with a multimeter" class="lb">
+      <img src="assets/bin-1.jpg" alt="Smart bin team" class="lb">
+      <img src="assets/vamos-2.jpg" alt="VAMOS testing" class="lb">
+      <img src="assets/heat-4.jpg" alt="Heat jacket test" class="lb">
+      <img src="assets/vamos-poster.jpg" alt="VAMOS app showing joint angles" class="lb">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. JOURNEY ============ -->
+<section id="journey" class="slide journey">
+  <div class="meta-row"><span>Keerthivasan J</span><span>04 / Journey</span></div>
+  <div class="title-block center">
+    <h2 class="big split">MY JOURNEY</h2>
+    <span class="script under">So far</span>
+  </div>
+  <div class="timeline" id="timeline">
+    <div class="tl reveal"><time>Aug 2024</time><h4>Started B.E. EEE</h4><p>Sri Sairam Engineering College, Chennai</p></div>
+    <div class="tl reveal"><time>Nov 2024</time><h4>VAMOS</h4><p>Multi-IMU wearable for rehabilitation</p></div>
+    <div class="tl reveal"><time>Mar 2025</time><h4>Heat Jacket</h4><p>Client prototype via Sairam Incubation Foundation</p></div>
+    <div class="tl reveal"><time>Jun 2025</time><h4>SIH 2025</h4><p>Smart Onion Storage, advanced round</p></div>
+    <div class="tl reveal"><time>Jul 2025</time><h4>Vermicompost Monitor</h4><p>First KiCad handheld design</p></div>
+    <div class="tl reveal"><time>Aug 2025</time><h4>Smart Bin</h4><p>Waste segregation with Arduino + Pi</p></div>
+    <div class="tl reveal"><time>Sep 2026</time><h4>Custom PCBs</h4><p>2-layer and 4-layer ESP32-C3 boards</p></div>
+  </div>
+  <div class="awards reveal">
+    <h3>Certifications &amp; Awards</h3>
+    <div class="award-row">
+      <div class="award tilt"><span class="medal">★</span><b>Pro-Arduino Data Kit Award</b><small>IEEE SSCS · 2025</small></div>
+      <div class="award tilt"><span class="medal">★</span><b>QUANTEX-2025</b><small>IEEE SSCS</small></div>
+      <div class="award tilt"><span class="medal">★</span><b>Op-Amps: Linear Integrated Circuits</b><small>Udemy · 2025</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. THANK YOU ============ -->
+<section id="contact" class="slide thanks">
+  <div class="meta-row"><span>Keerthivasan J</span><span>Portfolio</span></div>
+  <div class="thanks-title">
+    <span class="script thanks-script">For your attention</span>
+    <h2 class="mega split">THANK YOU</h2>
+    <a class="pill magnetic" id="sparkBtn" href="mailto:keerthivasanj3@gmail.com">Let's build something</a>
+  </div>
+  <div class="torn">
+    <div class="contacts">
+      <a href="tel:+918248532077"><span class="ci">☎</span>+91 82485 32077</a>
+      <a href="mailto:keerthivasanj3@gmail.com"><span class="ci">✉</span>keerthivasanj3@gmail.com</a>
+      <a href="https://github.com/Keerthivasan-cdm" target="_blank" rel="noopener"><span class="ci">GH</span>Keerthivasan-cdm</a>
+      <a href="https://linkedin.com/in/keerthi-vasan-j" target="_blank" rel="noopener"><span class="ci">in</span>keerthi-vasan-j</a>
+    </div>
+  </div>
+  <svg class="squig t1s wiggle"><use href="#sq"/></svg>
+  <svg class="squig t2s wiggle"><use href="#sq"/></svg>
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden><img alt=""><button aria-label="Close">×</button></div>
+<button class="print-btn" onclick="window.print()" title="Save as PDF">⤓ PDF</button>
+
+<script src="script.js"></script>
+</body>
+</html>
